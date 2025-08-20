@@ -21,7 +21,6 @@ Install the required dependencies:
 pip install ultralytics
 pip install opencv-python
 pip install numpy
-pip install imutils
 
 📸 YOLOv8 Object Detection in Images
 
@@ -80,3 +79,5 @@ Improve detection under night and rainy conditions.
 Add pedestrian detection together with zebra crossing recognition.
 
 Deploy on edge devices (Raspberry Pi, Jetson Nano) for real-world smart traffic systems.
+
+[LINK TO GOOGLE COLAB](https://colab.research.google.com/drive/1zPLVu-k9UUCD00-U2-20IfInraEjZ7RB?usp=chrome_ntp#scrollTo=-qguh0lgDVrd)
