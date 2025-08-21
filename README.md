@@ -122,6 +122,18 @@ python detect.py --weights best.pt --source 0
 
 🔌 Deploy on edge devices (Raspberry Pi, Jetson Nano) for smart traffic systems
 
+## Results
+
+![Zebra Crossing Detection](images/results1.jpg)
+
+![Zebra Crossing Detection](images/results2.jpg)
+
+![Zebra Crossing Detection](images/results3.jpg)
+
+![Zebra Crossing Detection](images/confusion_matrix.png)
+
+![Zebra Crossing Detection](images/graphs.png)
+
 🔗 Resources
 
 [YOLOv8 Documentation](https://docs.ultralytics.com/)
