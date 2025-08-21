@@ -6,11 +6,11 @@ Unlike generic detectors trained on the COCO dataset, this model is **specifical
 ---
 
 ## 🚦 Features  
-- ✅ Detect zebra crossings in **static images**  
-- ✅ Detect zebra crossings in **video streams** (CCTV, dashcam, traffic cameras)  
-- ✅ **Real-time detection** with webcam or live feed  
-- ✅ Trained & tested using **YOLOv8 on Google Colab**  
-- ✅ Fast, accurate, and supports **GPU acceleration**  
+-  Detect zebra crossings in **static images**  
+-  Detect zebra crossings in **video streams** (CCTV, dashcam, traffic cameras)  
+-  **Real-time detection** with webcam or live feed  
+-  Trained & tested using **YOLOv8 on Google Colab**  
+-  Fast, accurate, and supports **GPU acceleration**  
 
 ---
 
@@ -35,28 +35,28 @@ pip install numpy
 └── README.md                # Project documentation
 ```
 
-📸 Training in Google Colab
+ Training in Google Colab
 We trained the model using YOLOv8 (Nano variant) with a custom dataset.
 Here’s the Colab training workflow:
 
-# 📦 Unzip dataset into Colab
+#  Unzip dataset into Colab
 ```
 !unzip -q /content/data.zip -d /content/custom_data
 ```
 
-# 📥 Download train/val split script
+#  Download train/val split script
 ```
 !wget -O /content/train_val_split.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/utils/train_val_split.py
 ```
-# 🔀 Split dataset (90% train, 10% validation)
+#  Split dataset (90% train, 10% validation)
 ```
 !python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9
 ```
-# 🚀 Install YOLOv8
+#  Install YOLOv8
 ```
 !pip install ultralytics
 ```
-🔧 Auto-generate data.yaml
+Auto-generate data.yaml
 ```
 import yaml, os
 def create_data_yaml(path_to_classes_txt, path_to_data_yaml):
@@ -79,11 +79,11 @@ create_data_yaml('/content/custom_data/classes.txt', '/content/data.yaml')
 !cat /content/data.yaml
 ```
 
-🏋️ Train YOLOv8
+ Train YOLOv8
 ```
 !yolo detect train data=/content/data.yaml model=yolov8n.pt epochs=40 imgsz=640
 ```
-🎯 Inference (Prediction)
+ Inference (Prediction)
 Detect Zebra Crossings in Validation Images
 ```
 !yolo detect predict model=runs/detect/train/weights/best.pt source=data/validation/images save=True
@@ -96,7 +96,7 @@ for image_path in glob.glob('/content/runs/detect/predict/*.jpg')[:15]:
     display(Image(filename=image_path, height=400))
     print('\n')
 ```
-⚡ Real-Time Detection (Webcam / Video)
+ Real-Time Detection (Webcam / Video)
 For video files:
 ```
 python detect.py --weights best.pt --source videos/street.mp4 --save-txt --save-conf --project output --name zebra_output
