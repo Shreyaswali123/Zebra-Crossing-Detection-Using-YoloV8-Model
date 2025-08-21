@@ -1,4 +1,4 @@
-# 🦓 Zebra Crossing Detection using YOLOv8 & OpenCV  
+# 🦓 Zebra Crossing Detection using YOLOv8 Object Detection Method  
 
 Real-time **Zebra Crossing Detection** using the **YOLOv8 object detector** in **Google Colab**, with support for **images, videos, and live streams**.  
 Unlike generic detectors trained on the COCO dataset, this model is **specifically trained** for zebra crossing detection.  
@@ -107,6 +107,7 @@ python detect.py --weights best.pt --source 0
 ```
 
 📉 Limitations
+
 ❌ Low-visibility zebra crossings (worn paint, poor lighting, shadows) may not be detected.
 
 ❌ Performance depends on dataset quality and resolution.
@@ -114,6 +115,7 @@ python detect.py --weights best.pt --source 0
 ✅ Works best on urban roads with clear markings.
 
 ✅ Future Improvements
+
 🌙 Better detection in night & rainy conditions
 
 🚶 Combine pedestrian detection with zebra crossing recognition
@@ -121,5 +123,7 @@ python detect.py --weights best.pt --source 0
 🔌 Deploy on edge devices (Raspberry Pi, Jetson Nano) for smart traffic systems
 
 🔗 Resources
+
 [YOLOv8 Documentation](https://docs.ultralytics.com/)
+
 [Google Colab Notebook](https://colab.research.google.com/drive/1zPLVu-k9UUCD00-U2-20IfInraEjZ7RB?usp=chrome_ntp#scrollTo=-qguh0lgDVrd)
